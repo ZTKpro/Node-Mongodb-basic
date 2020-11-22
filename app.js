@@ -11,8 +11,8 @@ mongoClient.connect(url, {}, (error, client) => {
   // Adding one item to collection
   //   db.collection("users").insertOne(
   //     {
-  //       name: "Adam",
-  //       age: 21,
+  //       name: "Krzystof",
+  //       age: 31,
   //     },
   //     (error, result) => {
   //       if (error) console.log("Adding user error", error);
@@ -30,10 +30,11 @@ mongoClient.connect(url, {}, (error, client) => {
   //     });
 
   // delete items from collection
-  db.collection("users").deleteOne({ age: 25 }, (error, result) => {
-    console.log(result.deletedCount);
-  });
+  //   db.collection("users").deleteMany({ name: "Krzystof" }, (error, result) => {
+  //     console.log(result.deletedCount);
+  //   });
 
+  // finding collection. More methods https://docs.mongodb.com/manual/reference/method/js-collection/
   db.collection("users")
     .find({})
     .toArray((error, users) => {
